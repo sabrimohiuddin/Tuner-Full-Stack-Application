@@ -1,5 +1,8 @@
 const express = require("express");
 const songs = express.Router();
+const reviewsController = require("./reviewsController.js");
+songs.use("/:songId/reviews", reviewsController);
+
 const {
   getAllSongs,
   getSong,
